@@ -1,0 +1,2 @@
+run_id,stage,input_rows,output_rows,excluded_rows,criterion,status,notes
+admet_ai_cpu_5core,ADMET-AI throughput benchmark,10000,10000,0,"No filtering; prediction throughput measurement only",completed,"CPU affinity limited to five logical CPUs; see benchmark_admet_5core_metadata.json."

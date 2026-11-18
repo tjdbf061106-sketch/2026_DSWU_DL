@@ -1,0 +1,54 @@
+{
+  "benchmark_id": "admet_ai_cpu_5core",
+  "status": "completed",
+  "measured_at_utc": "2026-11-18T08:12:44.980924+00:00",
+  "model": {
+    "name": "ADMET-AI bundled pretrained ensembles",
+    "package_version": "2.0.1",
+    "include_physchem": false,
+    "dataloader_num_workers": 5
+  },
+  "hardware_constraint": {
+    "device": "CPU",
+    "cpu_affinity_logical_ids": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "cpu_affinity_count": 5,
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 1,
+    "blas_thread_environment": {
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "host_logical_cpus": 28,
+    "host_physical_cpus": 20,
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "input": {
+    "filename": "smiles.csv",
+    "full_library_rows": 2897819,
+    "benchmark_input_rows": 10000,
+    "unique_nonempty_smiles": 10000
+  },
+  "measurement": {
+    "read_and_row_count_seconds": 0.31022179999854416,
+    "model_load_seconds": 0.054197499997826526,
+    "prediction_seconds": 470.9527022000002,
+    "total_elapsed_seconds": 471.5819694999991,
+    "predicted_rows": 10000,
+    "invalid_or_unpredicted_rows": 0,
+    "throughput_predicted_rows_per_second": 21.233554777977012,
+    "full_library_prediction_estimate_seconds": 136473.56885365024,
+    "full_library_prediction_estimate_hours": 37.90932468156951,
+    "projection_note": "Projection is a linear estimate from one 10,000-row CPU benchmark; it excludes interruptions and may change with molecule complexity."
+  },
+  "outputs": {
+    "benchmark_predictions": "benchmark_admet_5core_predictions.csv"
+  }
+}

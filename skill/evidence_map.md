@@ -6,6 +6,7 @@
 |---|---|---|
 | 타겟·PDB 선정 근거 | `configs/project.local.yaml`, 타겟 조사 기록 | 미확정 |
 | 입력 화합물 수와 출처 | `experiment/inputs_manifest.csv` | 미실행 |
+| ADMET-AI 5코어 처리량 | `experiment/benchmark_admet_5core_metadata.json`, `docs/benchmark_admet_5core.md` | 완료 |
 | 활성/결합 예측 | `experiment/screening_results.csv`, `run_metadata.json` | 미실행 |
 | ADMET·물성 필터 | `experiment/screening_results.csv`, `filtering_summary.csv` | 미실행 |
 | 도킹 결과(선택) | `experiment/screening_results.csv`, 도킹 실행 기록 | 미실행 |
