@@ -1,0 +1,6 @@
+# Add only packages actually used in the final reproducible run.
+# Pin verified versions after the environment is finalized.
+pandas
+numpy
+matplotlib
+PyYAML

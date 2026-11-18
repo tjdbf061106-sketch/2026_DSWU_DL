@@ -1,0 +1,30 @@
+# Local configuration and secrets
+configs/project.local.yaml
+.env
+*.key
+*.token
+
+# Python environment and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Large inputs, model checkpoints, and temporary outputs
+data/
+models/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.sdf
+*.pdbqt
+*.tar
+*.zip
+
+# Keep documented final deliverables, but ignore temporary office files
+~$*.docx
+report/*.tmp

@@ -1,0 +1,39 @@
+# Copy to project.local.yaml, then fill in confirmed values.
+# Do not commit project.local.yaml if it contains local paths or credentials.
+project:
+  name: ai-virtual-screening-final
+  random_seed: null
+
+target:
+  disease: null
+  protein_name: null
+  uniprot_id: null
+  pdb_id: null
+  binding_site: null
+  selection_rationale_file: null
+
+input_library:
+  source: null
+  source_version: null
+  retrieval_date: null
+  input_path: null
+  smiles_column: null
+  compound_id_column: null
+
+models:
+  activity_predictor: null
+  admet_predictor: null
+  docking:
+    enabled: false
+    tool: GNINA
+    receptor_path: null
+
+filtering:
+  activity_threshold: null
+  logp_range: null
+  solubility_threshold: null
+  admet_rules: []
+
+outputs:
+  experiment_dir: experiment
+  figure_dir: experiment/figures
