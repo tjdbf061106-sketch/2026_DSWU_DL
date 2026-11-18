@@ -31,17 +31,34 @@
 ## 예정 파이프라인
 
 ```mermaid
-flowchart LR
-    A[화합물 데이터 수집] --> B[SMILES 검증·중복 제거]
-    B --> C[타겟 활성 예측]
-    C --> D[물성·ADMET 예측]
-    D --> E{도킹 필요?}
-    E -->|선택| F[GNINA 도킹·점수]
-    E -->|생략| G[결과 통합]
-    F --> G
-    G --> H[후보 순위·근거 표]
-    H --> I[도표·증거 파일]
-    I --> J[Solar Pro4 최종 보고서]
+flowchart TB
+    accTitle: Virtual Screening Analysis Pipeline
+    accDescr: Candidate compounds are curated, evaluated with selected prediction models, and narrowed into an evidence-backed ranking for a Solar Pro4 final report.
+
+    candidate_input([📥 화합물 library]) --> preflight[⚙️ 구조 정리·검증]
+    preflight --> activity_model[🧠 타겟 활성 예측]
+    activity_model --> admet_model[🧠 물성·ADMET 예측]
+    admet_model --> docking_check{🔍 GNINA 도킹 필요?}
+    docking_check -->|선택| docking_model[🧠 GNINA 도킹·점수]
+    docking_check -->|생략| evidence_store[(💾 실제 결과·설정 보존)]
+    docking_model --> evidence_store
+    evidence_store --> ranking[📋 후보 순위·선정 근거]
+    ranking --> report_model[🧠 Solar Pro4 보고서 작성]
+    report_model --> report_check{🔍 증거 파일 충분?}
+    report_check -->|충분| final_report([✅ 최종 DOCX 또는 PDF])
+    report_check -->|누락| missing_evidence[⚠️ 미실행·누락 기록]
+
+    classDef process fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a5f
+    classDef decision fill:#fef9c3,stroke:#ca8a04,stroke-width:2px,color:#713f12
+    classDef storage fill:#ede9fe,stroke:#7c3aed,stroke-width:2px,color:#3b0764
+    classDef success fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d
+    classDef danger fill:#fee2e2,stroke:#dc2626,stroke-width:2px,color:#7f1d1d
+
+    class preflight,activity_model,admet_model,docking_model,ranking,report_model process
+    class docking_check,report_check decision
+    class evidence_store storage
+    class candidate_input,final_report success
+    class missing_evidence danger
 ```
 
 모든 단계를 반드시 수행할 필요는 없습니다. 선택하지 않은 단계와 그 이유, 실행 실패와 한계도 `experiment/` 및 보고서에 남깁니다.
