@@ -1,0 +1,6 @@
+target,pdb_id,status,experimental_method,resolution_angstrom,nonpolymer_entity_count,title,endpoint,accessed_at_utc
+BACE1,4DJW,verified,X-RAY DIFFRACTION,1.9,2,Structure of BACE Bound to 2-imino-3-methyl-5-phenyl-5-(3-(pyridin-3-yl)phenyl)imidazolidin-4-one,https://data.rcsb.org/rest/v1/core/entry/4DJW,2026-11-18T08:40:47.481568+00:00
+DPP4,1X70,verified,X-RAY DIFFRACTION,2.1,3,HUMAN DIPEPTIDYL PEPTIDASE IV IN COMPLEX WITH A BETA AMINO ACID INHIBITOR,https://data.rcsb.org/rest/v1/core/entry/1X70,2026-11-18T08:40:47.481568+00:00
+PARP1,4UND,verified,X-RAY DIFFRACTION,2.2,2,HUMAN ARTD1 (PARP1) - CATALYTIC DOMAIN IN COMPLEX WITH INHIBITOR TALAZOPARIB,https://data.rcsb.org/rest/v1/core/entry/4UND,2026-11-18T08:40:47.481568+00:00
+BTK,5P9J,verified,X-RAY DIFFRACTION,1.08,1,BTK1 COCRYSTALLIZED WITH IBRUTINIB,https://data.rcsb.org/rest/v1/core/entry/5P9J,2026-11-18T08:40:47.481568+00:00
+TYK2,4GIH,verified,X-RAY DIFFRACTION,2.0,1,"Tyk2 (JH1) in complex with 2,6-DICHLORO-N-{2-[(CYCLOPROPYLCARBONYL)AMINO]PYRIDIN-4-YL}BENZAMIDE",https://data.rcsb.org/rest/v1/core/entry/4GIH,2026-11-18T08:40:47.481568+00:00
