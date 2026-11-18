@@ -1,2 +1,4 @@
 input_id,source_name,source_file,record_count,smiles_column,retrieval_date,status,notes
 chembl_37_smiles,ChEMBL 37 local SMILES export,smiles.csv,2897819,smiles,unknown,available,"Local file counted during the 5-core ADMET-AI benchmark; retrieval date was not recorded before this project repository was initialized."
+gnina_example_protein,course-provided local GNINA example,protein.pdb,1,not_applicable,unknown,available,"Used only for the one-ligand GNINA CPU benchmark."
+gnina_example_ligand,course-provided local GNINA example,ligand.sdf,1,not_applicable,unknown,available,"Used only for the one-ligand GNINA CPU benchmark."

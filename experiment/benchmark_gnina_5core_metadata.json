@@ -1,0 +1,34 @@
+{
+  "benchmark_id": "gnina_cpu_5core_single_ligand",
+  "measured_at_utc": "2026-11-18T08:22:01.208866+00:00",
+  "status": "completed",
+  "model": {
+    "tool": "GNINA",
+    "docker_image": "gnina/gnina:v1.3.3"
+  },
+  "hardware_constraint": {
+    "device": "CPU",
+    "docker_cpu_limit": 5,
+    "gnina_cpu_argument": 5,
+    "gpu_disabled": true
+  },
+  "input": {
+    "protein": "protein.pdb",
+    "ligand": "ligand.sdf",
+    "ligand_count": 1,
+    "search_box": "autobox_ligand from the provided ligand",
+    "exhaustiveness": 8,
+    "random_seed": 20261118
+  },
+  "measurement": {
+    "wall_clock_seconds_for_one_ligand": 2.668123299998115,
+    "wall_clock_minutes_for_one_ligand": 0.04446872166663525,
+    "return_code": 0,
+    "note": "This is a single-ligand CPU docking measurement, not a throughput estimate for arbitrary compounds."
+  },
+  "outputs": {
+    "docked_pose": "benchmark_gnina_5core_pose.sdf",
+    "stdout_log": "benchmark_gnina_5core_stdout.log",
+    "stderr_log": "benchmark_gnina_5core_stderr.log"
+  }
+}

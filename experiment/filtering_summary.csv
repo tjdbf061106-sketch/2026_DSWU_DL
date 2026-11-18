@@ -1,2 +1,3 @@
 run_id,stage,input_rows,output_rows,excluded_rows,criterion,status,notes
 admet_ai_cpu_5core,ADMET-AI throughput benchmark,10000,10000,0,"No filtering; prediction throughput measurement only",completed,"CPU affinity limited to five logical CPUs; see benchmark_admet_5core_metadata.json."
+gnina_cpu_5core_single_ligand,GNINA single-ligand docking benchmark,1,1,0,"No filtering; CPU docking timing measurement only",completed,"Five CPU cores, exhaustiveness 8, and fixed seed 20261118; see benchmark_gnina_5core_metadata.json."
